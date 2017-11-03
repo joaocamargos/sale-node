@@ -15,25 +15,25 @@
 	"configurationArguments": {
 		"applicationExtensionKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e",
 		"save": {
-			"url": "https://<URL OF THE SERVER RUNNING THE BACKEND>/activity/save",
+			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/save",
 			"verb": "POST",
 			"body": "",
 			"useJwt": true,
-			"customerKey": "<EXTERNAL KEY OF THE SALT KEY FOR THE JWT>"
+			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
 		},
 		"publish": {
-			"url": "https://<URL OF THE SERVER RUNNING THE BACKEND>/activity/publish",
+			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/publish",
 			"verb": "POST",
 			"body": "",
 			"useJwt": true,
-			"customerKey": "<EXTERNAL KEY OF THE SALT KEY FOR THE JWT>"
+			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
 		},
 		"validate": {
-			"url": "https://<URL OF THE SERVER RUNNING THE BACKEND>/activity/validate",
+			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/validate",
 			"verb": "POST",
 			"body": "",
 			"useJwt": true,
-			"customerKey": "<EXTERNAL KEY OF THE SALT KEY FOR THE JWT>"
+			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
 		}
 	},
 	"wizardSteps": [
@@ -69,18 +69,18 @@
 		"execute": {
 			"inArguments": [],
 			"outArguments": [],
-			"url": "https://<URL OF THE SERVER RUNNING THE BACKEND>/activity/execute",
+			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/execute",
 			"verb": "POST",
 			"body": "",
 			"header": "",
 			"format": "json",
 			"useJwt": true,
-			"customerKey": "<EXTERNAL KEY OF THE SALT KEY FOR THE JWT>",
+			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e",
 			"timeout": 90000
 		}
 	},
 	"edit": {
-		"url": "https://<URL OF THE SERVER RUNNING THE BACKEND>/index.html",
+		"url": "https://integracao-salesforce-pine.herokuapp.com/index.html",
 		"height": 200,
 		"width": 500
 	}
