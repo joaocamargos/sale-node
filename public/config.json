@@ -5,7 +5,7 @@
        "iconSmall": "images/iconSmall.png",
        "category": "message"
     },
-    "type": "PineOnline",
+    "type": "REST",
     "lang": {
        "en-US": {
            "name": "PineOniline",
@@ -17,16 +17,14 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "priority": "",
-                    "msgFrom": "",
-                    "action": "",
+                    "type": "",
                     "title": "",
 					"message": "",
 					"customerId" : "{{Contact.key}}"
                 }
             ],
             "outArguments": [
-                { "Id":"String" }
+                { "status":"String" }
             ],
             "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
@@ -82,9 +80,9 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 200,
-           "width": 300,
-           "fullscreen": true
+           "height": 370,
+           "width": 520,
+           "fullscreen": false
        }
     },
     "schema": {
