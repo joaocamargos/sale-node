@@ -22,7 +22,7 @@
                     "action": "",
                     "title": "",
 					"message": "",
-					"customerId": "{{Contact.ID}}"
+					"customerId": "{{Contact.key}}"
                 }
             ],
             "outArguments": [
