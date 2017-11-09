@@ -60,9 +60,9 @@ define(function (require) {
 		payload['arguments'].execute = payload['arguments'].execute || {};
 		payload['arguments'].execute.inArguments = [{
 			'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"<EVENT DATA ID PATH>\"}}',
-			"type": $('#type').val(),
-			"title": $('#title').val(),
-			"message": $('#message').val()
+			'type': $('#type').val(),
+			'title': $('#title').val(),
+			'message': $('#message').val()
 		}];
 
 		payload['metaData'] = payload['metaData'] || {};
