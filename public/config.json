@@ -1,15 +1,15 @@
 {
-    "workflowApiVersion": "1.1",
+    "workflowApiVersion": "1.0",
     "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
        "category": "message"
     },
-    "type": "REST",
+    "type": "PineOnline",
     "lang": {
        "en-US": {
-           "name": "CN Push Dev",
-           "description": "Atividade executa o push na central de notificação da Sicredi."
+           "name": "PineOniline",
+           "description": "Aplicativo personalizado por banco pine"
        }
     },
     "arguments": {
@@ -17,16 +17,14 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "priority": "",
-                    "msgFrom": "",
-                    "action": "",
+                    "type": "",
                     "title": "",
 					"message": "",
-					"customerId": "{{Contact.key}}"
+					"customerId" : "{{Contact.key}}"
                 }
             ],
             "outArguments": [
-                { "Id":"String" }
+                { "status":"String" }
             ],
             "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",

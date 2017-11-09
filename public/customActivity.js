@@ -58,10 +58,11 @@ define(function (require) {
 
 		payload['arguments'] = payload['arguments'] || {};
 		payload['arguments'].execute = payload['arguments'].execute || {};
-		payload['arguments'].execute.KeyinArguments = [{
+		payload['arguments'].execute.inArguments = [{
 			'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"<EVENT DATA ID PATH>\"}}',
-			'msgFrom' : $('#msgFrom').val(),
-			'customerId' : '{{Contact.key}}'
+			"type": $('#type').val(),
+			"title": $('#title').val(),
+			"message": $('#message').val()
 		}];
 
 		payload['metaData'] = payload['metaData'] || {};
