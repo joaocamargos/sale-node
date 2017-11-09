@@ -54,22 +54,23 @@ define(function (require) {
 	}
 
 	function save () {
-		var eventDefinitionKey = $('#msgFrom').val();
+		var eventDefinitionKey = $('#select-entryevent-defkey').val();
 
 		payload['arguments'] = payload['arguments'] || {};
 		payload['arguments'].execute = payload['arguments'].execute || {};
 		payload['arguments'].execute.inArguments = [{
-			'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"<EVENT DATA ID PATH>\"}}'
+			'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"<EVENT DATA ID PATH>\"}}',
+			'msgFrom' : $('#msgFrom').val()
 		}];
 
 		payload['metaData'] = payload['metaData'] || {};
 		payload['metaData'].isConfigured = true;
 
-		//console.log(JSON.stringify(payload));
-		var teste = {
-			"nome": "andrews"
-		}
-		connection.trigger('updateActivity', teste);
+		console.log(JSON.stringify(payload));
+
+		
+
+		connection.trigger('updateActivity', payload);
 	}
 
 	connection.on('initActivity', initialize);
