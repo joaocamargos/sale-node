@@ -20,11 +20,11 @@ define(function (require) {
 	}
 
 	function onClickedNext () {
+		save();/*
 		if (currentStep.key === 'eventdefinitionkey') {
-			save();
 		} else {
 			connection.trigger('nextStep');
-		}
+		}*/
 	}
 
 	function onClickedBack () {
