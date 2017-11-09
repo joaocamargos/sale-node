@@ -1,87 +1,113 @@
 {
-	"key": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e",
-	"metaData": {
-		"icon": "images/icon.png",
-		"iconSmall": "images/icon_small.png"
-	},
-	"type": "RESTDECISION",
-	"lang": {
-		"en-US": {
-			"name": "Service Cloud Custom Split",
-			"description": "Custom Split activity that makes a decision based on data from Service Cloud"
-		}
-	},
-	"workflowApiVersion": "1.1",
-	"configurationArguments": {
-		"applicationExtensionKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e",
-		"save": {
-			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/save",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
-		},
-		"publish": {
-			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/publish",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
-		},
-		"validate": {
-			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/validate",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e"
-		}
-	},
-	"wizardSteps": [
-		{"key": "eventdefinitionkey", "label": "Event Definition Key"}
-	],
-	"outcomes": [
-		{
-			"arguments": {
-				"branchResult": "<KEY FOR PATH 1>"
-			},
-			"metaData": {
-				"label": "<LABEL FOR PATH 1>"
-			}
-		},
-		{
-			"arguments": {
-				"branchResult": "<KEY FOR PATH 2>"
-			},
-			"metaData": {
-				"label": "<LABEL FOR PATH 2>"
-			}
-		}
-	],
-	"userInterfaces": {
-		"runningModal": {
-			"url": "runningModal.html"
-		},
-		"runningHover": {
-			"url": "runningHover.html"
-		}
-	},
-	"arguments": {
-		"execute": {
-			"inArguments": [],
-			"outArguments": [],
-			"url": "https://integracao-salesforce-pine.herokuapp.com/activity/execute",
-			"verb": "POST",
-			"body": "",
-			"header": "",
-			"format": "json",
-			"useJwt": true,
-			"customerKey": "0897a4c2ca5ea56dff01309f33a4deb0f8b8bf800261690f5324e248d738290e",
-			"timeout": 90000
-		}
-	},
-	"edit": {
-		"url": "https://integracao-salesforce-pine.herokuapp.com/index.html",
-		"height": 200,
-		"width": 500
-	}
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "icon": "images/icon.png",
+       "iconSmall": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "CN Push Dev",
+           "description": "Atividade executa o push na central de notificação da Sicredi."
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                    "emailAddress": "{{InteractionDefaults.Email}}",
+                    "priority": "",
+                    "msgFrom": "",
+                    "action": "",
+                    "title": "",
+                    "message": ""
+                }
+            ],
+            "outArguments": [
+                { "Id":"String" }
+            ],
+            "url": "https://heroku-site.herokuapp.com/sales",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
+       "save": {
+           "url": "https://heroku-site.herokuapp.com/sales",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "validate": {
+		"url": "https://heroku-site.herokuapp.com/sales",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "publish": {
+		"url": "https://heroku-site.herokuapp.com/sales",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "stop": {
+			"url": "https://heroku-site.herokuapp.com/sales",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" },
+       { "label": "Step 2", "key": "step2" }
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    }
 }
