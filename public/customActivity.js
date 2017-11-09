@@ -54,16 +54,18 @@ define(function (require) {
 	}
 
 	function save () {
+		var name = $('#message').val();
 		
+		payload.name = 'Push Notification App';
 
 		payload['arguments'].execute.inArguments[0].type = $('#type').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
         payload['arguments'].execute.inArguments[0].message = $('#message').val();
 
-		payload['metaData'] = payload['metaData'] || {};
+		
 		payload['metaData'].isConfigured = true;
 
-		console.log(JSON.stringify(payload));
+		console.log("Andrews"+JSON.stringify(payload));
 
 		
 
