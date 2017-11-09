@@ -82,7 +82,7 @@
        "configModal": {
            "height": 200,
            "width": 300,
-           "fullscreen": true
+           "fullscreen": false
        }
     },
     "schema": {
