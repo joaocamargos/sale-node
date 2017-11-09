@@ -54,9 +54,18 @@ define(function (require) {
 	}
 
 	function save () {
-		//var eventDefinitionKey = $('#select-entryevent-defkey').val();
+		var eventDefinitionKey = $('#select-entryevent-defkey').val();
 
-		
+		payload['arguments'] = payload['arguments'] || {};
+		payload['arguments'].execute = payload['arguments'].execute || {};
+		payload['arguments'].execute.inArguments = [{
+			'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"<EVENT DATA ID PATH>\"}}',
+			'msgFrom' : $('#msgFrom').val(),
+			'customerId' : '{{Contact.ID}}'
+		}];
+
+		payload['metaData'] = payload['metaData'] || {};
+		payload['metaData'].isConfigured = true;
 
 		console.log(JSON.stringify(payload));
 
