@@ -18,10 +18,11 @@
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
                     "priority": "",
-                    "msgFrom": "",
+                    "msgFrom": "{{Contact.ID}}",
                     "action": "",
                     "title": "",
-                    "message": ""
+					"message": "",
+					"customerId": "{{Contact.ID}}"
                 }
             ],
             "outArguments": [
