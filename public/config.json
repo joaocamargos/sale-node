@@ -27,7 +27,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "pinedev.pineonline.com.br:8080/api/keyboards?gw-app-key=e711a960bf200134b97f021e75abe44c",
+            "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
             "body": "",
             "header": "",

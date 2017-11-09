@@ -65,9 +65,11 @@ define(function (require) {
 		payload['metaData'] = payload['metaData'] || {};
 		payload['metaData'].isConfigured = true;
 
-		console.log(JSON.stringify(payload));
-
-		connection.trigger('updateActivity', payload);
+		//console.log(JSON.stringify(payload));
+		var teste = {
+			"nome": "andrews"
+		}
+		connection.trigger('updateActivity', teste);
 	}
 
 	connection.on('initActivity', initialize);
