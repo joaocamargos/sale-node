@@ -27,7 +27,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://heroku-site.herokuapp.com/teste",
+            "url": "https://sales--nodejs-herokuapp-com-k830kjkst4o2.runscope.net/teste",
             "verb": "POST",
             "body": "",
             "header": "",
