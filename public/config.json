@@ -27,7 +27,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://heroku-site.herokuapp.com/sales",
+            "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
             "body": "",
             "header": "",
