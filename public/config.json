@@ -17,14 +17,16 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "type": "",
+                    "priority": "",
+                    "msgFrom": "",
+                    "action": "",
                     "title": "",
 					"message": "",
 					"customerId" : "{{Contact.key}}"
                 }
             ],
             "outArguments": [
-                { "status":"String" }
+                { "Id":"String" }
             ],
             "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
@@ -80,9 +82,9 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 370,
-           "width": 520,
-           "fullscreen": false
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
        }
     },
     "schema": {

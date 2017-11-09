@@ -67,18 +67,20 @@
     </head>
     <body>
         <div id="step1" class="step">
-			<p>Por favor informe os campos abaixo.</p>
-            <p class="inputLabel">Tipo de Notificação</p>
+            <p>Please provide the values of the journey's entry event:</p>
+            <p class="inputLabel">Prioridade</p>
             <select id="type">
-				<option value="AUTOMATICO">AUTOMATICO</option>
-                <option value="PUSH">PUSH</option>
-				<option value="SMS">SMS</option>
-			</select>
-			<p>Automatico - prioridade do envio é para push caso esteja desabilitado o cliente recebera um sms.</p>
-			<p class="inputLabel">Titulo *</p>
-            <input id="title" placeholder="Título que será apresentado na notificação - obrigatório - máx. 50 caracteres" type="text" required="required" minlength="1" maxlength="50" autocomplete="on">
-            <p class="inputLabel">Mensagem *</p>
-            <input id="message" placeholder="Conteúdo da notificação - obrigatório - máx. 140 caracteres" type="text" required="required" minlength="1" maxlength="140" autocomplete="on">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+            <p class="inputLabel">From *</p>
+            <input id="msgFrom" placeholder="Nome que identifique a origem da mensagem - obrigatório" type="text" required="required" minlength="1" autocomplete="off">
+            <p class="inputLabel">Action *</p>
+            <input id="action" placeholder="Ação que será tratada/realizada no aplicativo" type="text" required="required" minlength="1" autocomplete="off">
+            <p class="inputLabel">Title *</p>
+            <input id="title" placeholder="Título que será apresentado na notificação - obrigatório - máx. 50 caracteres" type="text" required="required" minlength="1" maxlength="50" autocomplete="off">
+            <p class="inputLabel">Message *</p>
+            <input id="message" placeholder="Conteúdo da notificação - obrigatório - máx. 140 caracteres" type="text" required="required" minlength="1" maxlength="140" autocomplete="off">
         </div>
        
     </body>
