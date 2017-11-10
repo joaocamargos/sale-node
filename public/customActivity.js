@@ -59,10 +59,10 @@ define(function (require) {
 		
 		payload.name = 'Push Notification App';
 
-		payload['arguments'].execute.inArguments[index].type = $('#type').val();
-        payload['arguments'].execute.inArguments[index].title = $('#title').val();
-        payload['arguments'].execute.inArguments[index].message = $('#message').val();
-		index++;
+		payload['arguments'].execute.inArguments.type = $('#type').val();
+        payload['arguments'].execute.inArguments.title = $('#title').val();
+        payload['arguments'].execute.inArguments.message = $('#message').val();
+		
 		
 		payload['metaData'].isConfigured = true;
 
