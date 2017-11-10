@@ -14,16 +14,13 @@
     },
     "arguments": {
         "execute": {
-            "pushArguments": {
-				"emailAddress": "{{InteractionDefaults.Email}}",
+            "inArguments": {
+				"email": "{{InteractionDefaults.Email}}",
 				"type": "",
 				"title": "",
 				"message": "",
 				"customerId" : "{{Contact.key}}"
             },
-            "outArguments": [
-                { "status":"String" }
-            ],
             "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
             "body": "",
