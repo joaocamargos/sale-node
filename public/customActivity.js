@@ -57,7 +57,7 @@ define(function (require) {
 	function save () {
 		var name = $('#message').val();
 		
-		payload.name = 'Push Notification App';
+		payload.name = $('#type').val();
 
 		payload['arguments'].execute.inArguments[0].type = $('#type').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
