@@ -4,6 +4,7 @@ define(function (require) {
 	var Postmonger = require('postmonger');
 	var connection = new Postmonger.Session();
 	var payload = {};
+	var index = 0;
 	var steps = [
 		{'key': 'eventdefinitionkey', 'label': 'Event Definition Key'}
 	];
@@ -58,10 +59,10 @@ define(function (require) {
 		
 		payload.name = 'Push Notification App';
 
-		payload['arguments'].execute.inArguments[0].type = $('#type').val();
-        payload['arguments'].execute.inArguments[0].title = $('#title').val();
-        payload['arguments'].execute.inArguments[0].message = $('#message').val();
-
+		payload['arguments'].execute.inArguments[index].type = $('#type').val();
+        payload['arguments'].execute.inArguments[index].title = $('#title').val();
+        payload['arguments'].execute.inArguments[index].message = $('#message').val();
+		index++;
 		
 		payload['metaData'].isConfigured = true;
 
