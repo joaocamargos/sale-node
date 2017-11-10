@@ -8,19 +8,19 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PineOniline",
+           "name": "PineConnect",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
     "arguments": {
         "execute": {
-            "inArguments": {
+            "inArguments": [{
 				"email": "{{InteractionDefaults.Email}}",
 				"type": "",
 				"title": "",
 				"message": "",
 				"customerId" : "{{Contact.key}}"
-            },
+            }],
             "outArguments": [
                 { "status":"String" }
             ],
