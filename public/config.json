@@ -14,15 +14,13 @@
     },
     "arguments": {
         "execute": {
-            "inArguments": [
-                {
-                    "emailAddress": "{{InteractionDefaults.Email}}",
-                    "type": "",
-                    "title": "",
-					"message": "",
-					"customerId" : "{{Contact.key}}"
-                }
-            ],
+            "pushArguments": {
+				"emailAddress": "{{InteractionDefaults.Email}}",
+				"type": "",
+				"title": "",
+				"message": "",
+				"customerId" : "{{Contact.key}}"
+            },
             "outArguments": [
                 { "status":"String" }
             ],

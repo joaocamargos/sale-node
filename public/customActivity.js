@@ -58,16 +58,14 @@ define(function (require) {
 		
 		payload.name = 'Push Notification App';
 
-		payload['arguments'].execute.inArguments[0].type = $('#type').val();
-        payload['arguments'].execute.inArguments[0].title = $('#title').val();
-        payload['arguments'].execute.inArguments[0].message = $('#message').val();
+		payload['arguments'].execute.pushArguments.type = $('#type').val();
+        payload['arguments'].execute.pushArguments.title = $('#title').val();
+        payload['arguments'].execute.pushArguments.message = $('#message').val();
 
 		
 		payload['metaData'].isConfigured = true;
 
-		console.log("Andrews"+JSON.stringify(payload));
-
-		
+		//console.log("Andrews"+JSON.stringify(payload));
 
 		connection.trigger('updateActivity', payload);
 	}
