@@ -21,6 +21,9 @@
 				"message": "",
 				"customerId" : "{{Contact.key}}"
             },
+            "outArguments": [
+                { "status":"String" }
+            ],
             "url": "https://heroku-site.herokuapp.com/teste",
             "verb": "POST",
             "body": "",
