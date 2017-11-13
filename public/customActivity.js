@@ -15,10 +15,27 @@ define(function (require) {
 	});
 
 	function initialize (data) {
-		if (data) {
-			payload = data;
-		}
-	}
+        if (data) {
+            payload = data;
+        }
+        var message = '';
+        var title = '';
+
+        var hasInArguments = Boolean(
+            payload['arguments'] &&
+            payload['arguments'].execute &&
+            payload['arguments'].execute.inArguments &&
+            payload['arguments'].execute.inArguments.length > 0
+        );
+
+        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
+
+        if (!inArguments[0].message ) {
+            $('#type').val(inArguments[0].type);
+            $('#title').val(inArguments[0].title);
+            $('#message').val(inArguments[0].message);
+        }
+    }
 
 	function onClickedNext () {
 		save();/*
