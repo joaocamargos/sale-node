@@ -30,7 +30,7 @@ define(function (require) {
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        if (!inArguments[0].message ) {
+        if (inArguments[0].message ) {
             $('#type').val(inArguments[0].type);
             $('#title').val(inArguments[0].title);
             $('#message').val(inArguments[0].message);
