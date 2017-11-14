@@ -78,7 +78,7 @@ define(function (require) {
 		var name = $('#message').val();
 		
 		payload.name = $('#type').val();
-		var erro = false;
+		var erro = true;
 		if($('#title').val() == "" || $('#title').val() == null){
 			$('#erroMsg').html("Titulo Obrigatório.")
 			erro = false;
@@ -97,10 +97,6 @@ define(function (require) {
 		payload['arguments'].execute.inArguments[0].message = $('#message').val();
 		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
 		payload['metaData'].isConfigured = true;
-
-
-
-		//console.log("Andrews"+JSON.stringify(payload));
 
 		connection.trigger('updateActivity', payload);
 	}
