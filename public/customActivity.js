@@ -78,14 +78,27 @@ define(function (require) {
 		var name = $('#message').val();
 		
 		payload.name = $('#type').val();
+		var erro = false;
+		if($('#title').val() == "" || $('#title').val() == null){
+			$('#erroMsg').htm("Titulo Obrigatório.")
+			erro = false;
+		}
+		if($('#message').val() == "" || $('#message').val() == null){
+			$('#erroMsg').htm("<br />Menssagem Obrigatória.")
+			erro = false;
+		}
+
+		if(!erro){
+			return;
+		}
 
 		payload['arguments'].execute.inArguments[0].type = $('#type').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
 		payload['arguments'].execute.inArguments[0].message = $('#message').val();
 		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
-		
-		
 		payload['metaData'].isConfigured = true;
+
+
 
 		//console.log("Andrews"+JSON.stringify(payload));
 

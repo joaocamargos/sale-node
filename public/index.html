@@ -89,6 +89,11 @@
     </head>
     <body>
         <div id="step1" class="step form-group">
+            <div>
+                <h4 style="color:red" id="erroMsg"> 
+                        
+                </h4> 
+            </div>
 			<p>Por favor informe os campos abaixo.</p>
             <p class="inputLabel">Tipo de Notificação</p>
             <select id="type" onchange="hideTitle()" class="form-control">
@@ -103,8 +108,8 @@
                 <option value="">Sem categoria</option>
                 <option value="TRANSFERS">Transferencias</option>
                 <option value="INVESTMENTS">Investimentos</option>
-                <option value="REGISTRATION_DATA">Resgate</option>
-                <option value="CASH_OUT">Cadastro</option>
+                <option value="CASH_OUT">Resgate</option>
+                <option value="REGISTRATION_DATA">Cadastro</option>
                 <option value="OFFERS_PROMOTIONS">Ofertas e promoções</option>
             </select>
             
