@@ -80,11 +80,11 @@ define(function (require) {
 		payload.name = $('#type').val();
 		var erro = false;
 		if($('#title').val() == "" || $('#title').val() == null){
-			$('#erroMsg').htm("Titulo Obrigatório.")
+			$('#erroMsg').html("Titulo Obrigatório.")
 			erro = false;
 		}
 		if($('#message').val() == "" || $('#message').val() == null){
-			$('#erroMsg').htm("<br /> Menssagem Obrigatória.")
+			$('#erroMsg').html("<br /> Menssagem Obrigatória.")
 			erro = false;
 		}
 
