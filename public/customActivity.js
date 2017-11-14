@@ -84,7 +84,7 @@ define(function (require) {
 			erro = false;
 		}
 		if($('#message').val() == "" || $('#message').val() == null){
-			$('#erroMsg').htm("<br />Menssagem Obrigatória.")
+			$('#erroMsg').htm("<br /> Menssagem Obrigatória.")
 			erro = false;
 		}
 
