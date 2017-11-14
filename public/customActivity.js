@@ -33,7 +33,8 @@ define(function (require) {
         if (inArguments[0].message ) {
             $('#type').val(inArguments[0].type);
             $('#title').val(inArguments[0].title);
-            $('#message').val(inArguments[0].message);
+			$('#message').val(inArguments[0].message);
+			$('#categoria').val(inArguments[0].categoria);
         }
     }
 
@@ -71,6 +72,8 @@ define(function (require) {
 		}
 	}
 
+	
+
 	function save () {
 		var name = $('#message').val();
 		
@@ -78,7 +81,8 @@ define(function (require) {
 
 		payload['arguments'].execute.inArguments[0].type = $('#type').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
-        payload['arguments'].execute.inArguments[0].message = $('#message').val();
+		payload['arguments'].execute.inArguments[0].message = $('#message').val();
+		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
 		
 		
 		payload['metaData'].isConfigured = true;

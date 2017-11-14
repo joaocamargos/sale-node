@@ -18,7 +18,8 @@
 				"email": "{{InteractionDefaults.Email}}",
 				"type": "",
 				"title": "",
-				"message": "",
+                "message": "",
+                "categoria":"",
 				"customerId" : "{{Contact.key}}"
             }],
             "outArguments": [

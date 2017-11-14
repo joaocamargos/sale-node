@@ -7,6 +7,16 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/require.js"></script>
         <script type="text/javascript">
+            function hideTitle(){
+                var type = $('#type').val();
+                if(type == "SMS"){
+                    $('#title').hide();
+                }else{
+                    $('#title').show();
+                }
+            }
+        </script>
+        <script type="text/javascript">
             (function() {
                 var config = {
                     baseUrl: ''
@@ -69,9 +79,17 @@
         <div id="step1" class="step">
 			<p>Por favor informe os campos abaixo.</p>
             <p class="inputLabel">Tipo de Notificação</p>
-            <select id="type">
+            <select id="type" onchange="hideTitle()">
                 <option value="PUSH">PUSH</option>
 				<option value="SMS">SMS</option>
+            </select>
+            <select id="categoria">
+                <option value="">Sem categoria - selecionada por padrao</option>
+                <option value="transferencias">Transferencias</option>
+                <option value="investimentos">Investimentos</option>
+                <option value="resgate">Resgate</option>
+                <option value="cadastro">Cadastro</option>
+                <option value="ofertas">Ofertas e promoções</option>
 			</select>
 			<p>Automatico - prioridade do envio é para push caso esteja desabilitado o cliente recebera um sms.</p>
 			<p class="inputLabel">Titulo *</p>
