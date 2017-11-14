@@ -78,19 +78,6 @@ define(function (require) {
 		var name = $('#message').val();
 		
 		payload.name = $('#type').val();
-		var erro = true;
-		if($('#title').val() == "" || $('#title').val() == null){
-			$('#erroMsg').html("Titulo Obrigatório.")
-			erro = false;
-		}
-		if($('#message').val() == "" || $('#message').val() == null){
-			$('#erroMsg').html("<br /> Menssagem Obrigatória.")
-			erro = false;
-		}
-
-		if(!erro){
-			return;
-		}
 
 		payload['arguments'].execute.inArguments[0].type = $('#type').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
