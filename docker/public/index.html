@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Journey Builder Activity v1.3</title>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/require.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function hideTitle(){
+                var type = $('#type').val();
+                if(type == "SMS"){
+                 //   $('#title').hide();
+                   // $('#tituloLabel').hide();
+                    $('#labalParaPush').hide();
+                    
+                }else{
+                 //   $('#title').show();
+                //    $('#tituloLabel').show();
+                    $('#labalParaPush').show();
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            (function() {
+                var config = {
+                    baseUrl: ''
+                };
+
+                var dependencies = [
+                    'customActivity'
+                ];
+
+                require(config, dependencies);
+            })();
+        </script>
+
+        <style type="text/css">
+        body {
+            padding: 15px;
+            margin: 0;
+            font-size: 11px;
+            color: #16325c;
+            font-family: "Salesforce Sans", Arial, sans-serif;
+        }
+
+        .step {
+            display: none;
+        }
+
+        #step1 {
+            display: block;
+        }
+
+        input {
+            font-family: inherit;
+            display: block;
+            padding: 4px 5px;
+            font-size: 11px;
+            color: #16325c;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        input[type=text] {
+            
+            margin-bottom: 10px;
+        }
+
+        .inputLabel {
+            margin-bottom: 5px;
+            font-size: 8pt;
+            color: #808080;
+            text-transform: uppercase;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div id="step1" class="step form-group">
+            <div>
+                    
+                <h4> 
+                    <p id="erroMsg" style="color:red"></p>
+                </h4> 
+            </div>
+			<p>Por favor informe os campos abaixo.</p>
+            <p class="inputLabel">Tipo de Notificação</p>
+            <select id="type" onchange="hideTitle()" class="form-control">
+                <option value="PUSH">PUSH</option>
+				<option value="SMS">SMS</option>
+            </select>
+            <br />
+            <p id="labalParaPush">Push - Prioridade do envio é sempre para push caso esteja desabilitado o cliente recebera um sms.</p>
+            <br />
+            <p class="inputLabel">Tipo de Categoria</p>
+            <select id="categoria" class="form-control" >
+                <option value="">Sem categoria</option>
+                <option value="TRANSFERS">Transferencias</option>
+                <option value="INVESTMENTS">Investimentos</option>
+                <option value="CASH_OUT">Resgate</option>
+                <option value="REGISTRATION_DATA">Cadastro</option>
+                <option value="OFFERS_PROMOTIONS">Ofertas e promoções</option>
+            </select>
+            
+			
+            <p class="inputLabel" id="tituloLabel">Titulo *</p>
+            <div class="row">
+            <div class="col-md-12">
+                <input id="title" class="form-control"  placeholder="Título que será apresentado na notificação - obrigatório - máx. 50 caracteres" type="text" required="required" minlength="1" maxlength="50" autocomplete="on" />
+            </div>
+            </div>
+            <p class="inputLabel">Mensagem *</p>
+            <div class="row">
+                    <div class="col-md-12">
+            <textarea rows="4"  id="message" class="form-control" placeholder="Conteúdo da notificação - obrigatório - máx. 140 caracteres" type="text" required="required" minlength="1" maxlength="140" autocomplete="on" ></textarea>
+                    </div>
+            </div>
+        </div>
+       
+    </body>
+</html>

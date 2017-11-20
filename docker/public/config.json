@@ -1,0 +1,111 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+       "icon": "images/icon.png",
+       "iconSmall": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "PineConnect",
+           "description": "Aplicativo personalizado por banco pine"
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [{
+				"email": "{{InteractionDefaults.Email}}",
+				"type": "",
+				"title": "",
+                "message": "",
+                "categoria":"",
+				"customerId" : "{{Contact.key}}"
+            }],
+            "outArguments": [
+                { "status":"String" }
+            ],
+            "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
+       "save": {
+           "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "validate": {
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "publish": {
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "stop": {
+			"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" }
+       
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 440,
+           "width": 520,
+           "fullscreen": false
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
