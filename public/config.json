@@ -15,9 +15,9 @@
     "arguments": {
         "execute": {
             "inArguments": [{
-				"email": "{{InteractionDefaults.Email}}",
-				"type": "",
-				"title": "",
+		"email": "{{InteractionDefaults.Email}}",
+		"type": "",
+		"title": "",
                 "message": "",
                 "categoria":"",
 				"customerId" : "{{Contact.key}}"
