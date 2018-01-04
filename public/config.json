@@ -9,7 +9,7 @@
     "lang": {
        "en-US": {
            "name": "PinePushDEV",
-           "description": "Aplicativo personalizado por banco pine"
+           "description": "Aplicativo personalizado por banco pine."
        }
     },
     "arguments": {
@@ -20,7 +20,7 @@
 		"title": "",
                 "message": "",
                 "categoria":"",
-				"customerId" : "{{Contact.key}}"
+		"customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
