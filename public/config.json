@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PineConnect DEV",
+           "name": "PineConnectDev",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
