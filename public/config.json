@@ -8,11 +8,11 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PineConnect Dev",
+           "name": "PineConnect DEV",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
-      "arguments": {
+    "arguments": {
         "execute": {
             "inArguments": [{
 				"email": "{{InteractionDefaults.Email}}",
@@ -25,8 +25,7 @@
             "outArguments": [
                 { "status":"String" }
             ],
-
-	    "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -38,8 +37,8 @@
     "configurationArguments": {
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
-        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-        "verb": "POST",
+           "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -47,8 +46,8 @@
             "timeout": 10000
        },
        "validate": {
-        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-        "verb": "POST",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -56,8 +55,8 @@
             "timeout": 10000
        },
        "publish": {
-        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-        "verb": "POST",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -65,8 +64,8 @@
             "timeout": 10000
        },
        "stop": {
-        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-        "verb": "POST",
+			"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
