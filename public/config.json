@@ -25,7 +25,7 @@
             "outArguments": [
                 { "status":"String" }
             ],
-            "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
